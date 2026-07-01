@@ -1,35 +1,8 @@
-# CRM GH - Netlify Simples
-
-Esta versao evita o erro `Deploy directory "public" does not exist`.
-
-## Como publicar
-
-Suba o conteudo desta pasta para o GitHub com estes arquivos na raiz:
-
-```txt
-index.html
-netlify.toml
-package.json
-netlify/functions/ai.js
-netlify/functions/ai-status.js
-```
-
-Na Netlify:
-
-```txt
-Build command: npm run build
-Publish directory: .
-Functions directory: netlify/functions
-```
-
-Depois configure uma variavel de ambiente:
-
-```txt
-GEMINI_API_KEY
-```
-
-Teste:
-
-```txt
-https://SEU-SITE.netlify.app/.netlify/functions/ai-status
-```
+{
+  "name": "crm-gh-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('Static CRM: no build needed')\""
+  }
+}
