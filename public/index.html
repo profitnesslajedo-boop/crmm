@@ -57,6 +57,166 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 .vbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
 .vbtn{padding:9px;border-radius:var(--r2);font-size:12px;font-weight:700;cursor:pointer;border:1px solid rgba(59,130,246,.25);color:rgba(255,255,255,.85);background:rgba(10,22,40,.6);font-family:inherit;transition:all .15s}
 .vbtn:hover{border-color:var(--border2);color:var(--blue3);background:rgba(59,130,246,.06)}
+
+/* Login card premium finish - scoped only to login screens */
+#s-login .lc,#s-vlogin .lc{
+  background:var(--navy2);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  border:0!important;
+  outline:0;
+  border-radius:7px;
+  padding:44px 42px;
+  max-width:440px;
+  box-shadow:0 14px 34px rgba(5,12,26,.34),0 3px 10px rgba(5,12,26,.20);
+}
+#s-login .l-logo,#s-vlogin .l-logo{
+  width:74px;
+  height:74px;
+  border-radius:8px;
+  margin-bottom:18px;
+  box-shadow:0 4px 14px rgba(5,12,26,.24);
+}
+#s-login .l-title,#s-vlogin .l-title{
+  position:relative;
+  display:inline-block;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.03em;
+  line-height:1.2;
+  margin-bottom:10px;
+}
+#s-login .l-title::after,#s-vlogin .l-title::after{
+  content:'';
+  display:block;
+  width:42px;
+  height:1px;
+  background:var(--border2);
+  margin:10px auto 0;
+}
+#s-login .l-sub,#s-vlogin .l-sub{
+  margin-bottom:38px;
+  color:var(--gray2);
+}
+#s-login .llbl,#s-vlogin .llbl{
+  margin-bottom:8px;
+  color:var(--gray2);
+  font-weight:700;
+}
+#s-login .lin,#s-vlogin .lin{
+  min-height:54px;
+  background:var(--navy2);
+  border:0;
+  border-left:3px solid var(--blue3);
+  border-radius:7px;
+  color:var(--white);
+  font-size:14px;
+  font-weight:500;
+  padding:0 14px 0 16px;
+  margin-bottom:16px;
+  box-shadow:0 2px 8px rgba(5,12,26,.18),0 0 0 1px var(--border);
+}
+#s-login .lin::placeholder,#s-vlogin .lin::placeholder{
+  color:var(--gray2);
+  font-size:13px;
+  font-weight:400;
+}
+#s-login .lin:focus,#s-vlogin .lin:focus{
+  border-left-color:var(--blue4);
+  box-shadow:0 3px 10px rgba(37,99,235,.16),0 0 0 1px var(--border2);
+}
+#s-login .lbtn,#s-vlogin .lbtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  min-width:214px;
+  min-height:42px;
+  padding:0 24px;
+  border-radius:6px;
+  font-size:13px;
+  font-weight:700;
+  box-shadow:0 5px 14px rgba(37,99,235,.18);
+}
+#s-login .lbtn:hover,#s-vlogin .lbtn:hover{
+  background:var(--blue);
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(37,99,235,.22);
+}
+#s-login .lbtn:active,#s-vlogin .lbtn:active{
+  transform:translateY(0);
+  box-shadow:0 3px 10px rgba(37,99,235,.16);
+}
+#s-login .lbtn:disabled,#s-vlogin .lbtn:disabled{
+  opacity:.62;
+  cursor:not-allowed;
+  transform:none;
+}
+#s-login .lerr,#s-vlogin .lerr{
+  margin-top:10px;
+  color:var(--red);
+  font-size:11px;
+  line-height:1.4;
+}
+#s-login .l-sep{
+  margin:26px 0 18px;
+  color:var(--gray2);
+}
+#s-login .vbtns{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  align-items:stretch;
+}
+#s-login .vbtn,#s-vlogin .vbtn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  min-height:42px;
+  border-radius:7px;
+  border-color:var(--border);
+  background:var(--navy);
+  color:var(--gray2);
+  text-align:center;
+  box-shadow:0 2px 8px rgba(5,12,26,.14);
+}
+#s-login .vbtn:hover,#s-vlogin .vbtn:hover{
+  border-color:var(--border2);
+  color:var(--blue3);
+  background:var(--navy3);
+  transform:translateY(-1px);
+}
+#s-login .brand-tagline{
+  border-radius:8px;
+  margin-top:18px;
+  background:var(--navy2);
+  border-color:var(--border);
+}
+@media(max-width:520px){
+  #s-login .lc,#s-vlogin .lc{
+    padding:28px 26px;
+    border-radius:8px;
+  }
+  #s-login .l-logo,#s-vlogin .l-logo{
+    width:66px;
+    height:66px;
+  }
+  #s-login .l-title,#s-vlogin .l-title{
+    font-size:18px;
+  }
+  #s-login .l-sub,#s-vlogin .l-sub{
+    margin-bottom:30px;
+  }
+  #s-login .lin,#s-vlogin .lin{
+    min-height:52px;
+  }
+  #s-login .lbtn,#s-vlogin .lbtn{
+    width:100%;
+    min-height:42px;
+    min-width:0;
+  }
+}
+
 .share-note{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:var(--r2);padding:12px 16px;margin-top:16px;text-align:left}
 .share-note-title{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
 .share-note-txt{font-size:12px;color:var(--gray2)}
@@ -122,10 +282,11 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
 .etab.on.mmp{background:#0E1F3D;border-color:var(--blue3);color:var(--blue3)}
 
 /* ── EVENT CARDS ── */
-.event-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.event-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .ecard{background:var(--navy);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px}
 .ecard.mmp{border-color:var(--border2)}
 .ecard.md{border-top:2px solid var(--amber)}
+.ecard.pe{border-top:2px solid var(--green)}
 .ecard-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray2);margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .ecard-title span{font-size:13px}
 .ecard-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -277,6 +438,52 @@ table.vt tbody tr:hover{background:rgba(59,130,246,.04)}
 .st-input:focus{border-color:var(--blue3)}
 .st-badge{display:inline-flex;padding:2px 8px;border-radius:var(--r3);font-size:10px;font-weight:700;margin-bottom:4px}
 
+
+/* VENDOR SALES DASHBOARD */
+.sales-panel{display:none}
+.sales-hero{background:linear-gradient(135deg,rgba(16,185,129,.11),rgba(6,182,212,.06));border:1px solid rgba(16,185,129,.25);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.sales-hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+.sales-hero-title{font-size:15px;font-weight:900;color:var(--white);line-height:1.2}
+.sales-hero-sub{font-size:11px;color:var(--gray2);margin-top:4px;line-height:1.45}
+.sales-badge{display:inline-flex;align-items:center;border-radius:var(--r3);padding:4px 10px;background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.32);color:var(--green);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.sales-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.sales-kpi{background:rgba(5,12,26,.36);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:10px 12px;min-width:0}
+.sales-kpi-v{font-size:18px;font-weight:900;color:var(--green);line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sales-kpi-l{font-size:8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-top:6px}
+.sales-form{background:var(--navy);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.sales-form-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.sales-field label{display:block;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-bottom:5px}
+.sales-field input,.sales-field select{width:100%;background:var(--navy2);border:1px solid var(--border);border-radius:var(--r2);color:var(--white);font-size:13px;padding:10px 11px;outline:none;font-family:inherit}
+.sales-field input:focus,.sales-field select:focus{border-color:var(--green)}
+.sales-field.full{grid-column:span 2}
+.sales-preview{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.22);border-radius:10px;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sales-preview span{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
+.sales-preview b{font-size:18px;color:var(--green)}
+.sales-proof-note{font-size:10px;color:var(--gray2);line-height:1.35;margin-top:6px;min-height:15px}
+.sales-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.sales-btn{border:none;border-radius:var(--r2);padding:10px 16px;font-size:12px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:.03em}
+.sales-btn.primary{background:var(--green);color:#052014}
+.sales-btn.secondary{background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--gray2)}
+.sales-btn.danger{background:rgba(244,63,94,.12);border:1px solid rgba(244,63,94,.28);color:var(--red)}
+.sales-filters{background:var(--navy);border:1px solid var(--border);border-radius:var(--r);padding:14px 18px;margin-bottom:14px;display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end}
+.sales-list{background:var(--navy);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.sales-list-head{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sales-list-title{font-size:12px;font-weight:900;color:var(--white)}
+.sales-list-sub{font-size:10px;color:var(--gray2)}
+.sales-table-wrap{overflow-x:auto}
+table.sales-table{width:100%;border-collapse:collapse;min-width:900px}
+table.sales-table th{padding:9px 10px;background:var(--navy2);border-bottom:1px solid var(--border);font-size:8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gray2);text-align:left}
+table.sales-table td{padding:10px;border-top:1px solid var(--border);font-size:11px;color:var(--gray2);vertical-align:middle}
+table.sales-table tbody tr:hover{background:rgba(16,185,129,.04)}
+.sale-type-pill{display:inline-flex;border-radius:var(--r3);padding:2px 8px;font-size:9px;font-weight:800;border:1px solid rgba(6,182,212,.3);color:#06B6D4;background:rgba(6,182,212,.1);white-space:nowrap}
+.sale-type-pill.mentoria{border-color:rgba(139,92,246,.35);color:#A78BFA;background:rgba(139,92,246,.12)}
+.sales-mini-actions{display:flex;gap:5px;flex-wrap:wrap}
+.sales-mini{border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--gray2);border-radius:6px;padding:5px 7px;font-size:10px;font-weight:800;cursor:pointer;font-family:inherit}
+.sales-mini:hover{border-color:rgba(16,185,129,.35);color:var(--green)}
+.sales-empty{padding:18px;color:var(--gray);font-size:12px;text-align:center}
+@media(max-width:900px){.sales-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.sales-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sales-filters{grid-template-columns:1fr 1fr}.sales-filters .sales-actions{grid-column:1/-1}}
+@media(max-width:620px){.sales-hero-top{flex-direction:column}.sales-summary,.sales-form-grid,.sales-filters{grid-template-columns:1fr}.sales-field.full{grid-column:span 1}.sales-preview{align-items:flex-start;flex-direction:column}}
+
 /* ── OBS ── */
 .obs-card{background:var(--navy);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px}
 .obs-title{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
@@ -295,6 +502,8 @@ table.vt tbody tr:hover{background:rgba(59,130,246,.04)}
 /* ── VENDOR SIDEBAR ── */
 .vendor-layout{display:grid;grid-template-columns:1fr 240px;gap:20px;align-items:start}
 .vendor-main{}
+.vendor-layout.no-link-sidebar{grid-template-columns:1fr}
+.vendor-layout.no-link-sidebar .lnk-sidebar{display:none}
 .lnk-sidebar{background:var(--navy2);border:1px solid var(--border2);border-radius:var(--r);padding:14px 16px;position:sticky;top:70px}
 .lnk-sidebar-title{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .lnk-event-title{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue3);margin-bottom:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
@@ -411,6 +620,27 @@ body.md-active{background:#0D0B00}
 /* ── DASHBOARD MODERNIZATION ── */
 .dash-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .dash-connection-line{height:2px;background:linear-gradient(90deg,var(--blue2),transparent);margin:16px 0 4px;border-radius:2px;opacity:.4}
+
+
+/* Produto Especial no dashboard principal */
+.pe-dash-panel{background:var(--navy);border:1px solid rgba(16,185,129,.24);border-radius:var(--r);padding:18px 20px;position:relative;overflow:hidden}
+.pe-dash-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green)}
+.pe-dash-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
+.pe-dash-title{font-size:15px;font-weight:900;color:var(--white);line-height:1.2}
+.pe-dash-owner{font-size:11px;color:var(--gray2);margin-top:4px;line-height:1.4}
+.pe-dash-badge{font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:var(--r3);padding:4px 10px;white-space:nowrap}
+.pe-dash-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.pe-dash-kpi{background:var(--navy2);border:1px solid var(--border);border-radius:10px;padding:10px 8px;text-align:center;min-width:0}
+.pe-dash-kpi-v{font-size:22px;font-weight:900;line-height:1}
+.pe-dash-kpi-l{font-size:8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gray);margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pe-dash-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px}
+table.pe-dash-table{width:100%;border-collapse:collapse;min-width:760px}
+table.pe-dash-table th{padding:8px 10px;background:var(--navy2);font-size:8px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--gray2);text-align:center;border-bottom:1px solid var(--border)}
+table.pe-dash-table th:first-child{text-align:left}
+table.pe-dash-table td{padding:9px 10px;border-top:1px solid var(--border);font-size:12px;font-weight:700;text-align:center;color:var(--gray2)}
+table.pe-dash-table td:first-child{text-align:left;color:var(--white)}
+@media(max-width:800px){.pe-dash-head{flex-direction:column}.pe-dash-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 
 /* ── CROP MODAL ── */
 #crop-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
@@ -667,9 +897,8 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
       <div class="vbtns">
         <button class="vbtn" onclick="openVL('Igor')">👤 Igor</button>
         <button class="vbtn" onclick="openVL('Jack')">👤 Jack</button>
-        <button class="vbtn" onclick="openVL('José')">👤 José</button>
-        <button class="vbtn" onclick="openVL('Bruno')">👤 Bruno</button>
-        <button class="vbtn" style="grid-column:span 2" onclick="openVL('Esteves')">👤 M. Esteves</button>
+        <button class="vbtn" onclick="openVL('Jose')">👤 José</button>
+        <button class="vbtn" onclick="openVL('Esteves')">👤 M. Esteves</button>
       </div>
       <div class="brand-tagline">
         <div class="bt-main">ACELERAÇÃO DE VENDAS</div>
@@ -721,10 +950,10 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
           <div class="hero-left">
             <div class="hero-eyebrow"><span class="pulse"></span>Dashboard ao vivo · 2026</div>
             <div class="hero-title">EXECUTIVO DE <span>VENDAS</span></div>
-            <div class="hero-desc" id="dash-mode-label">Painel consolidado · Med Master Plan + Monster Day · Marcos Esteves</div>
+            <div class="hero-desc" id="dash-mode-label">Painel consolidado · Med Master Plan + Monster Day + Produto Especial · Marcos Esteves</div>
             <div class="hero-chips">
-              <span class="chip">👥 5 vendedores</span><span class="chip-sep"></span>
-              <span class="chip">🎪 2 eventos</span><span class="chip-sep"></span>
+              <span class="chip">👥 4 vendedores</span><span class="chip-sep"></span>
+              <span class="chip">🎪 3 produtos</span><span class="chip-sep"></span>
               <span class="chip">📅 15 dias</span><span class="chip-sep"></span>
               <span class="chip">🔄 Tempo real</span>
             </div>
@@ -806,6 +1035,31 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
         <div class="kpi"><span class="kpi-ic">🔄</span><div class="kv" style="color:var(--rose)" id="k-fu">0</div><div class="kl">Follow-ups</div></div>
       </div>
 
+
+      <div class="sec"><span class="sec-lbl">Produto Especial · vendas e informações</span><span class="sec-line"></span></div>
+      <div class="pe-dash-panel" id="pe-dash-panel">
+        <div class="pe-dash-head">
+          <div>
+            <div class="pe-dash-title" id="pe-dash-title">Produto Especial</div>
+            <div class="pe-dash-owner" id="pe-dash-owner">Produto de: responsável não definido</div>
+          </div>
+          <div class="pe-dash-badge">Integrado ao painel geral</div>
+        </div>
+        <div class="pe-dash-kpis">
+          <div class="pe-dash-kpi"><div class="pe-dash-kpi-v" style="color:var(--blue3)" id="pe-main-ab">0</div><div class="pe-dash-kpi-l">Abordados</div></div>
+          <div class="pe-dash-kpi"><div class="pe-dash-kpi-v" style="color:var(--green)" id="pe-main-cf">0</div><div class="pe-dash-kpi-l">Confirmados</div></div>
+          <div class="pe-dash-kpi"><div class="pe-dash-kpi-v" style="color:var(--teal)" id="pe-main-ing">0</div><div class="pe-dash-kpi-l">Ingressos</div></div>
+          <div class="pe-dash-kpi"><div class="pe-dash-kpi-v" style="color:var(--purple)" id="pe-main-men">0</div><div class="pe-dash-kpi-l">Mentorias</div></div>
+          <div class="pe-dash-kpi"><div class="pe-dash-kpi-v" style="color:var(--rose)" id="pe-main-fu">0</div><div class="pe-dash-kpi-l">Follow-ups</div></div>
+        </div>
+        <div class="pe-dash-table-wrap">
+          <table class="pe-dash-table">
+            <thead><tr><th>Vendedor</th><th>Abordados</th><th>Negociação</th><th>Confirmados</th><th>Ingressos</th><th>Mentorias</th><th>Perdidos</th><th>FU feitos</th><th>Conv.%</th></tr></thead>
+            <tbody id="pe-dash-vendors"></tbody>
+          </table>
+        </div>
+      </div>
+
       <div class="sec"><span class="sec-lbl">Performance por vendedor</span><span class="sec-line"></span></div>
       <div class="vtc">
         <div class="vtc-head"><span class="vtc-title">Ranking de vendedores · acumulado</span><span class="vtc-sub">ambos os eventos</span></div>
@@ -836,9 +1090,13 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
           <div class="ecard-title"><span>🟠</span> Monster Day</div>
           <div class="ecard-kpis" id="md-kpis"></div>
         </div>
+        <div class="ecard pe">
+          <div class="ecard-title"><span>🟢</span> <span id="pe-event-card-title">Produto Especial</span></div>
+          <div class="ecard-kpis" id="pe-kpis"></div>
+        </div>
       </div>
       <div class="sec"><span class="sec-lbl">Tipo de venda · ingressos vs mentorias</span><span class="sec-line"></span></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" id="sale-type-summary"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px" id="sale-type-summary"></div>
     </div>
 
     <!-- CHANNELS TAB -->
@@ -855,7 +1113,7 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
       <div class="rem-grid" id="rem-grid"></div>
     </div>
 
-    <div class="foot"><div class="foot-brand">EXECUTIVO DE VENDAS · GH</div><div class="foot-sub">Med Master Plan + Monster Day · 2026</div></div>
+    <div class="foot"><div class="foot-brand">EXECUTIVO DE VENDAS · GH</div><div class="foot-sub">Med Master Plan + Monster Day + Produto Especial · 2026</div></div>
   </div>
 </div>
 
@@ -871,12 +1129,14 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
       <div class="tb-nav">
         <button class="tn on" id="vtn-mmp" onclick="vTab('mmp')">Med Master Plan</button>
         <button class="tn" id="vtn-md" onclick="vTab('md')">Monster Day</button>
+        <button class="tn" id="vtn-pe" onclick="vTab('pe')">Produto Especial</button>
+        <button class="tn" id="vtn-sales" onclick="vTab('sales')">Vendas</button>
       </div>
       <button class="tb-logout" id="vendor-exit-btn" onclick="vendorExit()">Sair</button>
     </div>
   </div>
   <div class="page">
-    <div class="vendor-layout">
+    <div class="vendor-layout" id="vendor-layout">
     <div class="vendor-main">
     <div class="vhero">
       <div class="vhero-top">
@@ -896,8 +1156,8 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
       <button class="goal-save-btn" onclick="saveGoal()">💾</button>
     </div>
 
-    <div class="sec"><span class="sec-lbl">📅 Lançamento por dia (editável)</span><span class="sec-line"></span></div>
-    <div class="datebar">
+    <div class="sec" id="daily-sec"><span class="sec-lbl">📅 Lançamento por dia (editável)</span><span class="sec-line"></span></div>
+    <div class="datebar" id="daily-datebar">
       <div class="datebar-top"><span class="datebar-lbl">📝 Edite qualquer dia · clique numa data abaixo</span><span class="datebar-active" id="v-date-active">—</span></div>
       <div style="font-size:10px;color:var(--gray);margin-bottom:8px;line-height:1.4">Dias com dados salvos aparecem em <b style="color:var(--blue3)">azul</b>. Dia ativo no topo. Tudo é salvo automaticamente — pode entrar dias depois e editar livremente.</div>
       <div class="datebar-btns" id="v-date-btns"></div>
@@ -927,12 +1187,140 @@ body.md-active #monstro-panel .ai-msg-loading span{background:#FB923C}
       <div id="v-st-md"></div>
     </div>
 
-    <div class="sec"><span class="sec-lbl">Observações do dia</span><span class="sec-line"></span></div>
-    <div class="obs-card">
+    <!-- PRODUTO ESPECIAL TAB -->
+    <div id="vt-pe" style="display:none">
+      <div class="form-section-title" style="color:var(--green)">🟢 PRODUTO ESPECIAL · CONFIGURAÇÃO</div>
+      <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);border-radius:12px;padding:14px;margin-bottom:14px">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+          <div>
+            <label style="display:block;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:5px">Nome do produto</label>
+            <input class="lin" id="pe-product-name" type="text" placeholder="Ex: Produto da esteira" style="margin-bottom:0">
+          </div>
+          <div>
+            <label style="display:block;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:5px">Produto de quem</label>
+            <input class="lin" id="pe-product-owner" type="text" placeholder="Ex: Especialista / responsável" style="margin-bottom:0">
+          </div>
+        </div>
+        <div style="font-size:10px;color:var(--gray2);margin-top:8px">Essas informações podem ser alteradas sempre que entrar um novo produto na esteira de vendas.</div>
+      </div>
+      <div class="form-section-title" id="pe-src-title">📋 ORIGENS DOS LEADS · PRODUTO ESPECIAL</div>
+      <div class="source-grid" id="v-src-pe"></div>
+      <div class="form-section-title" id="pe-met-title">📊 MÉTRICAS DO DIA · PRODUTO ESPECIAL</div>
+      <div class="metrics-grid" id="v-met-pe"></div>
+      <div class="form-section-title" id="pe-st-title">🎫 TIPO DE VENDA · PRODUTO ESPECIAL</div>
+      <div id="v-st-pe"></div>
+    </div>
+
+    <!-- SALES DASHBOARD TAB -->
+    <div id="vt-sales" class="sales-panel">
+      <div class="sales-hero">
+        <div class="sales-hero-top">
+          <div>
+            <div class="sales-hero-title">Dashboard individual de vendas</div>
+            <div class="sales-hero-sub">Registre vendas, comprador, comissão e comprovante. Os dados ficam salvos neste navegador para consulta por mês ou data.</div>
+          </div>
+          <div class="sales-badge">Vendas salvas</div>
+        </div>
+        <div class="sales-summary" id="sales-summary"></div>
+      </div>
+
+      <div class="sales-form">
+        <div class="form-section-title" style="color:var(--green)">REGISTRAR VENDA</div>
+        <input type="hidden" id="sale-id">
+        <div class="sales-form-grid">
+          <div class="sales-field">
+            <label>Data da venda</label>
+            <input id="sale-date" type="date">
+          </div>
+          <div class="sales-field full">
+            <label>Produto vendido</label>
+            <input id="sale-product" type="text" placeholder="Ex: Gold, Diamond, Mentoria, Produto Especial">
+          </div>
+          <div class="sales-field">
+            <label>Tipo</label>
+            <select id="sale-type">
+              <option value="ingresso">Ingresso</option>
+              <option value="mentoria">Mentoria</option>
+            </select>
+          </div>
+          <div class="sales-field">
+            <label>Valor da venda</label>
+            <input id="sale-value" type="number" min="0" step="0.01" placeholder="0,00">
+          </div>
+          <div class="sales-field">
+            <label>Houve desconto?</label>
+            <select id="sale-discount">
+              <option value="nao">Não</option>
+              <option value="sim">Sim</option>
+            </select>
+          </div>
+          <div class="sales-field">
+            <label>Valor do desconto</label>
+            <input id="sale-discount-value" type="number" min="0" step="0.01" placeholder="0,00">
+          </div>
+          <div class="sales-field">
+            <label>% comissão</label>
+            <input id="sale-commission-pct" type="number" min="0" step="0.01" placeholder="Ex: 10">
+          </div>
+          <div class="sales-preview">
+            <span>Valor a receber</span>
+            <b id="sale-commission-preview">R$ 0,00</b>
+          </div>
+          <div class="sales-field">
+            <label>Nome do comprador</label>
+            <input id="sale-buyer-name" type="text" placeholder="Nome completo">
+          </div>
+          <div class="sales-field">
+            <label>Telefone</label>
+            <input id="sale-buyer-phone" type="tel" placeholder="(00) 00000-0000">
+          </div>
+          <div class="sales-field">
+            <label>E-mail</label>
+            <input id="sale-buyer-email" type="email" placeholder="email@exemplo.com">
+          </div>
+          <div class="sales-field">
+            <label>Comprovante</label>
+            <input id="sale-proof" type="file" accept="image/*,application/pdf">
+            <div class="sales-proof-note" id="sale-proof-status">PDF ou imagem, se houver.</div>
+          </div>
+        </div>
+        <div class="sales-actions">
+          <button class="sales-btn primary" onclick="saveVendorSale()">Salvar venda</button>
+          <button class="sales-btn secondary" onclick="clearSaleForm()">Limpar formulário</button>
+        </div>
+      </div>
+
+      <div class="sales-filters">
+        <div class="sales-field">
+          <label>Buscar por mês</label>
+          <input id="sale-filter-month" type="month">
+        </div>
+        <div class="sales-field">
+          <label>Buscar por data exata</label>
+          <input id="sale-filter-date" type="date">
+        </div>
+        <div class="sales-actions" style="margin-top:0">
+          <button class="sales-btn secondary" onclick="clearSalesFilters()">Ver todas</button>
+        </div>
+      </div>
+
+      <div class="sales-list">
+        <div class="sales-list-head">
+          <div>
+            <div class="sales-list-title">Histórico de vendas</div>
+            <div class="sales-list-sub" id="sales-list-sub">Todas as vendas salvas</div>
+          </div>
+        </div>
+        <div id="sales-list"></div>
+      </div>
+    </div>
+
+    <div class="sec" id="daily-obs-sec"><span class="sec-lbl">Observações do dia</span><span class="sec-line"></span></div>
+    <div class="obs-card" id="daily-obs-card">
       <div class="obs-title">Anotações · acontecimentos do dia</div>
       <textarea class="obs-ta" id="v-obs" placeholder="Descreva o que aconteceu — leads interessantes, objeções, observações importantes..."></textarea>
     </div>
-    <div style="display:flex;align-items:center">
+    <div style="display:flex;align-items:center" id="daily-save-row">
       <button class="save-btn" onclick="saveDay()">💾 Salvar dados do dia</button>
       <span class="saved-toast" id="saved-toast">✅ Salvo com sucesso!</span>
     </div>
@@ -968,11 +1356,10 @@ const VENDORS=[
   {id:'Igor',    pw:'Igor@GH26',    color:'#3B82F6',initials:'IG',phone:'5511999990001',waSlug:'igor'},
   {id:'Jack',    pw:'Jack@GH26',    color:'#10B981',initials:'JK',phone:'5581992325430',waSlug:'jackellyne'},
   {id:'Jose',    pw:'Jose@GH26',    color:'#F59E0B',initials:'JO',phone:'5511992098870',waSlug:'jose'},
-  {id:'Bruno',   pw:'Bruno@GH26',   color:'#8B5CF6',initials:'BR',phone:'5511959709250',waSlug:'bruno'},
   {id:'Esteves', pw:'Esteves@GH26', color:'#06B6D4',initials:'ME',phone:'5511924787933',waSlug:'esteves'},
 ];
-const EVENTS=['mmp','md'];
-const EVENT_NAMES={mmp:'Med Master Plan',md:'Monster Day'};
+const EVENTS=['mmp','md','pe'];
+const EVENT_NAMES={mmp:'Med Master Plan',md:'Monster Day',pe:'Produto Especial'};
 const SOURCES=[
   {key:'trafego',label:'Trafego / Clint',icon:'📡',color:'#3B82F6'},
   {key:'instagram_abord',label:'Instagram',icon:'📷',color:'#E1306C'},
@@ -1020,6 +1407,24 @@ var META={cf:50,ab:105,fu:70};
 try{META=JSON.parse(localStorage.getItem('gh_meta2026')||JSON.stringify(META))}catch(e){}
 var IGE={};
 try{IGE=JSON.parse(localStorage.getItem('gh_ig2026')||'{}')}catch(e){}
+var SALES={};
+try{SALES=JSON.parse(localStorage.getItem('gh_sales2026')||'{}')}catch(e){}
+var SPECIAL_PRODUCT={name:'',owner:''};
+try{SPECIAL_PRODUCT=Object.assign(SPECIAL_PRODUCT,JSON.parse(localStorage.getItem('gh_special_product2026')||'{}'))}catch(e){}
+function purgeRemovedVendorData(){
+  var removed='Bru'+'no';
+  Object.keys(ST).forEach(function(k){if(k.indexOf(removed+'__')===0||k.indexOf('obs__'+removed+'__')===0)delete ST[k];});
+  if(REMINDERS[removed])delete REMINDERS[removed];
+  if(IGE[removed])delete IGE[removed];
+  if(SALES[removed])delete SALES[removed];
+  try{localStorage.removeItem('gh_goal_'+removed);localStorage.removeItem('gh_photo_'+removed);Object.keys(localStorage).forEach(function(k){if(k.indexOf('gh_monstro_'+removed+'_')===0)localStorage.removeItem(k);});}catch(e){}
+  saveAll();saveReminders();saveIGE();saveSales();
+}
+purgeRemovedVendorData();
+function saveSpecialProduct(){localStorage.setItem('gh_special_product2026',JSON.stringify(SPECIAL_PRODUCT));updateSpecialProductLabels();}
+function specialProductName(){return SPECIAL_PRODUCT.name&&SPECIAL_PRODUCT.name.trim()?SPECIAL_PRODUCT.name.trim():'Produto Especial';}
+function specialProductOwner(){return SPECIAL_PRODUCT.owner&&SPECIAL_PRODUCT.owner.trim()?SPECIAL_PRODUCT.owner.trim():'Responsavel nao definido';}
+function eventDisplayName(evt){return evt==='pe'?specialProductName():(EVENT_NAMES[evt]||evt);}
 
 function stKey(vid,evt,day,field){return vid+'__'+evt+'__'+day+'__'+field;}
 function gV(vid,evt,day,field){return ST[stKey(vid,evt,day,field)]||0;}
@@ -1030,6 +1435,7 @@ function saveAll(){localStorage.setItem('gh_crm2026',JSON.stringify(ST));}
 function saveMeta(){localStorage.setItem('gh_meta2026',JSON.stringify(META));}
 function saveReminders(){localStorage.setItem('gh_rem2026',JSON.stringify(REMINDERS));}
 function saveIGE(){localStorage.setItem('gh_ig2026',JSON.stringify(IGE));}
+function saveSales(){localStorage.setItem('gh_sales2026',JSON.stringify(SALES));}
 
 function sumV(vid,evt,field){var t=0;for(var d=0;d<N;d++)t+=gV(vid,evt,d,field);return t;}
 function sumAll(evt,field){var t=0;VENDORS.forEach(function(v){t+=sumV(v.id,evt,field);});return t;}
@@ -1193,7 +1599,7 @@ function updateDash(){
   document.getElementById('k-ing').textContent=tIng;
   document.getElementById('k-men').textContent=tMen;
   document.getElementById('k-fu').textContent=tFu;
-  buildVTable();buildVendorDetailGrid();buildCharts();
+  buildSpecialProductDashboard();buildVTable();buildVendorDetailGrid();buildCharts();
 }
 
 function vendorTotals(v){
@@ -1273,6 +1679,49 @@ function vendorMetricHTML(label,value,color){
   return '<div class="vdc-metric"><div class="vdc-value" style="color:'+color+'">'+value+'</div><div class="vdc-label">'+label+'</div></div>';
 }
 
+
+function buildSpecialProductDashboard(){
+  var body=document.getElementById('pe-dash-vendors');
+  if(!body)return;
+  updateSpecialProductLabels();
+  var name=specialProductName();
+  var owner=specialProductOwner();
+  document.getElementById('pe-dash-title').textContent=name;
+  document.getElementById('pe-dash-owner').textContent='Produto de: '+owner;
+  var totalAb=sumAll('pe','abordados');
+  var totalCf=sumAll('pe','confirmados');
+  var totalIng=sumAll('pe','ingressos');
+  var totalMen=sumAll('pe','mentorias');
+  var totalFu=sumAll('pe','followup');
+  document.getElementById('pe-main-ab').textContent=totalAb;
+  document.getElementById('pe-main-cf').textContent=totalCf;
+  document.getElementById('pe-main-ing').textContent=totalIng;
+  document.getElementById('pe-main-men').textContent=totalMen;
+  document.getElementById('pe-main-fu').textContent=totalFu;
+  body.innerHTML='';
+  VENDORS.forEach(function(v){
+    var ab=sumV(v.id,'pe','abordados');
+    var ng=sumV(v.id,'pe','negociacao');
+    var cf=sumV(v.id,'pe','confirmados');
+    var ing=sumV(v.id,'pe','ingressos');
+    var men=sumV(v.id,'pe','mentorias');
+    var pd=sumV(v.id,'pe','perdidos');
+    var fu=sumV(v.id,'pe','followup');
+    var cv=pct(cf,ab);
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><div class="vname"><div style="background:'+v.color+'20;color:'+v.color+';border:1.5px solid '+v.color+';width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;flex-shrink:0">'+v.initials+'</div><span>'+v.id+'</span></div></td>'
+      +'<td style="color:#3B82F6">'+ab+'</td>'
+      +'<td style="color:#F59E0B">'+ng+'</td>'
+      +'<td style="color:#10B981;font-size:14px;font-weight:900">'+cf+'</td>'
+      +'<td style="color:#06B6D4">'+ing+'</td>'
+      +'<td style="color:#8B5CF6">'+men+'</td>'
+      +'<td style="color:#EF4444">'+pd+'</td>'
+      +'<td style="color:#F43F5E">'+fu+'</td>'
+      +'<td><span class="bsm" style="background:rgba(16,185,129,.12);color:#10B981">'+cv+'%</span></td>';
+    body.appendChild(tr);
+  });
+}
+
 function buildVTable(){
   var tb=document.getElementById('vtbody');tb.innerHTML='';
   var rows=VENDORS.map(function(v){
@@ -1332,12 +1781,13 @@ function buildCharts(){
   if(cDough)cDough.destroy();
   cDough=new Chart(document.getElementById('cDough'),{
     type:'doughnut',
-    data:{labels:VENDORS.map(function(v){return v.id;}),datasets:[{data:any?cfByV:Array(5).fill(1),backgroundColor:any?VENDORS.map(function(v){return v.color;}):Array(5).fill('#1A3566'),borderColor:'#070F22',borderWidth:3,hoverOffset:5}]},
+    data:{labels:VENDORS.map(function(v){return v.id;}),datasets:[{data:any?cfByV:Array(VENDORS.length).fill(1),backgroundColor:any?VENDORS.map(function(v){return v.color;}):Array(VENDORS.length).fill('#1A3566'),borderColor:'#070F22',borderWidth:3,hoverOffset:5}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{color:'#9CA3AF',font:{size:10},boxWidth:8,padding:9,usePointStyle:true}},tooltip:{backgroundColor:'#0E1F3D',borderColor:'rgba(59,130,246,.3)',borderWidth:1,titleColor:'#fff',bodyColor:'#9CA3AF'}},animation:{duration:400}}
   });
 }
 
 function buildEventsTab(){
+  updateSpecialProductLabels();
   EVENTS.forEach(function(evt){
     var g=document.getElementById(evt+'-kpis');g.innerHTML='';
     var kpis=[['Abordados','abordados','#3B82F6'],['Confirmados','confirmados','#10B981'],
@@ -1352,7 +1802,8 @@ function buildEventsTab(){
   var g2=document.getElementById('sale-type-summary');g2.innerHTML='';
   EVENTS.forEach(function(evt){
     var ing=sumAll(evt,'ingressos'),men=sumAll(evt,'mentorias');
-    var col=evt==='md'?'#F59E0B':'#3B82F6';
+    if(evt==='pe')EVENT_NAMES.pe=specialProductName();
+    var col=evt==='md'?'#F59E0B':evt==='pe'?'#10B981':'#3B82F6';
     var div=document.createElement('div');
     div.style.cssText='background:var(--navy);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px';
     div.innerHTML='<div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:'+col+';margin-bottom:14px">'+EVENT_NAMES[evt]+'</div>'
@@ -1415,24 +1866,42 @@ function sendRem(vid,phone,btn){
 }
 
 // ── VENDOR PAGE ────────────────────────────────────────────────
+function updateLinkSidebarForTab(tab){
+  var layout=document.getElementById('vendor-layout');
+  if(!layout)return;
+  layout.classList.toggle('no-link-sidebar',tab==='pe'||tab==='sales');
+}
 function vTab(t){
-  document.getElementById('vt-mmp').style.display=t==='mmp'?'block':'none';
-  document.getElementById('vt-md').style.display=t==='md'?'block':'none';
-  document.getElementById('vtn-mmp').classList.toggle('on',t==='mmp');
-  document.getElementById('vtn-md').classList.toggle('on',t==='md');
+  var tabs=EVENTS.concat(['sales']);
+  tabs.forEach(function(e){
+    var panel=document.getElementById('vt-'+e);
+    var btn=document.getElementById('vtn-'+e);
+    if(panel)panel.style.display=e===t?'block':'none';
+    if(btn){btn.classList.toggle('on',e===t);btn.style.cssText='';}
+  });
+  ['daily-sec','daily-datebar','daily-obs-sec','daily-obs-card','daily-save-row'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.style.display=t==='sales'?'none':'';
+  });
+  updateLinkSidebarForTab(t);
   var vpage=document.getElementById('s-vendor');
+  vpage.classList.remove('md-theme');
+  document.body.classList.remove('md-active');
   if(t==='md'){
     vpage.classList.add('md-theme');
     document.body.classList.add('md-active');
     document.getElementById('vtn-md').style.cssText='background:#B45309;border-color:#B45309;color:#fff;padding:5px 13px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.03em';
-    document.getElementById('vtn-mmp').style.cssText='';
-  }else{
-    vpage.classList.remove('md-theme');
-    document.body.classList.remove('md-active');
-    document.getElementById('vtn-md').style.cssText='';
-    document.getElementById('vtn-mmp').style.cssText='';
   }
-  curVEvt=t;
+  if(t==='pe'){
+    document.getElementById('vtn-pe').style.cssText='background:#10B981;border-color:#10B981;color:#fff;padding:5px 13px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.03em';
+    buildSpecialProductInfo();
+  }
+  if(t==='sales'){
+    document.getElementById('vtn-sales').style.cssText='background:#10B981;border-color:#10B981;color:#052014;padding:5px 13px;border-radius:20px;font-size:11px;font-weight:900;cursor:pointer;font-family:inherit;letter-spacing:.03em';
+    buildVendorSalesDashboard(curVendor);
+  }else{
+    curVEvt=t;
+  }
 }
 
 function buildVendorPage(v){
@@ -1488,14 +1957,17 @@ function buildVendorPage(v){
   var sb=document.getElementById('lnk-sidebar');
   if(sb) sb.innerHTML=buildLinkSidebar(v);
   buildDateBtns(v);
-  buildVendorDayForm(v,curDay,'mmp');
-  buildVendorDayForm(v,curDay,'md');
+  EVENTS.forEach(function(evt){buildVendorDayForm(v,curDay,evt);});
+  buildSpecialProductInfo();
+  buildVendorSalesDashboard(v);
   igSelProfile={mmp:null,md:null};
   igSelType={mmp:null,md:null};
   document.getElementById('s-vendor').classList.remove('md-theme');
   document.body.classList.remove('md-active');
   document.getElementById('vtn-md').style.cssText='';
   document.getElementById('vtn-mmp').style.cssText='';
+  document.getElementById('vtn-sales').style.cssText='';
+  vTab('mmp');
   loadGoal(v.id);
   // Atualizar badge do Monstro com cota restante do vendedor
   if(typeof monstroUpdateUsageUI==='function')monstroUpdateUsageUI();
@@ -1510,7 +1982,8 @@ function buildDateBtns(v){
   DATES.forEach(function(d,i){
     var has=EVENTS.some(function(e){
       return ['abordados','confirmados','followup'].some(function(f){return gV(v.id,e,i,f)>0;})
-             || getIGE(v.id,e,i).length>0;
+             || getIGE(v.id,e,i).length>0
+             || salesByDate(v.id,salesDateFromDay(i)).length>0;
     });
     var b=document.createElement('button');
     b.className='db'+(i===curDay?' on':has?' has':'');
@@ -1519,8 +1992,7 @@ function buildDateBtns(v){
       saveCurrentObs();
       curDay=i;
       buildDateBtns(v);
-      buildVendorDayForm(v,i,'mmp');
-      buildVendorDayForm(v,i,'md');
+      EVENTS.forEach(function(evt){buildVendorDayForm(v,i,evt);});
     });
     el.appendChild(b);
   });
@@ -1529,16 +2001,277 @@ function buildDateBtns(v){
 
 function buildVendorDayForm(v,day,evt){
   buildSources(v,evt,day);
-  buildIGSection(v,evt,day);
+  if(evt!=='pe')buildIGSection(v,evt,day);
   buildMetrics(v,evt,day);
   buildSaleType(v,evt,day);
   document.getElementById('v-obs').value=gObs(v.id,day);
 }
 
+function sourcesForEvent(evt){return evt==='pe'?SOURCES.filter(function(s){return s.key!=='instagram_abord';}):SOURCES;}
+function updateSpecialProductLabels(){
+  var name=specialProductName();
+  var owner=specialProductOwner();
+  EVENT_NAMES.pe=name;
+  var btn=document.getElementById('vtn-pe');if(btn)btn.textContent=name.length>18?name.slice(0,18)+'...':name;
+  var cardTitle=document.getElementById('pe-event-card-title');if(cardTitle)cardTitle.textContent=name;
+  ['pe-src-title','pe-met-title','pe-st-title'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){
+      var prefix=id==='pe-src-title'?'📋 ORIGENS DOS LEADS · ':id==='pe-met-title'?'📊 MÉTRICAS DO DIA · ':'🎫 TIPO DE VENDA · ';
+      el.textContent=prefix+name.toUpperCase()+' · '+owner;
+    }
+  });
+}
+function buildSpecialProductInfo(){
+  var nameInp=document.getElementById('pe-product-name');
+  var ownerInp=document.getElementById('pe-product-owner');
+  if(nameInp&&!nameInp.dataset.bound){
+    nameInp.dataset.bound='1';
+    nameInp.addEventListener('input',function(){SPECIAL_PRODUCT.name=this.value;saveSpecialProduct();});
+  }
+  if(ownerInp&&!ownerInp.dataset.bound){
+    ownerInp.dataset.bound='1';
+    ownerInp.addEventListener('input',function(){SPECIAL_PRODUCT.owner=this.value;saveSpecialProduct();});
+  }
+  if(nameInp)nameInp.value=SPECIAL_PRODUCT.name||'';
+  if(ownerInp)ownerInp.value=SPECIAL_PRODUCT.owner||'';
+  updateSpecialProductLabels();
+}
+
+function salesEsc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function salesMoney(v){return (Number(v)||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+function salesTodayIso(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function salesMonthIso(){return salesTodayIso().slice(0,7);}
+function salesDateFromDay(day){var d=DATES[day];return d?d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'):salesTodayIso();}
+function salesFmtDate(iso){if(!iso)return '-';var p=iso.split('-');return p.length===3?p[2]+'/'+p[1]+'/'+p[0]:iso;}
+function getVendorSales(vid){if(!SALES[vid])SALES[vid]=[];return SALES[vid];}
+function salesByDate(vid,iso){return getVendorSales(vid).filter(function(s){return s.date===iso;});}
+function currentSalesFilters(){
+  return {
+    month:(document.getElementById('sale-filter-month')||{}).value||'',
+    date:(document.getElementById('sale-filter-date')||{}).value||''
+  };
+}
+function filteredVendorSales(vid){
+  var f=currentSalesFilters();
+  return getVendorSales(vid).filter(function(s){
+    if(f.date)return s.date===f.date;
+    if(f.month)return (s.date||'').slice(0,7)===f.month;
+    return true;
+  }).sort(function(a,b){return String(b.date).localeCompare(String(a.date))||String(b.updatedAt||b.id).localeCompare(String(a.updatedAt||a.id));});
+}
+function updateSaleCommissionPreview(){
+  var value=parseFloat((document.getElementById('sale-value')||{}).value)||0;
+  var pct=parseFloat((document.getElementById('sale-commission-pct')||{}).value)||0;
+  var preview=document.getElementById('sale-commission-preview');
+  if(preview)preview.textContent=salesMoney(value*pct/100);
+}
+function buildVendorSalesDashboard(v){
+  if(!v)return;
+  var date=document.getElementById('sale-date');
+  var month=document.getElementById('sale-filter-month');
+  if(date&&!date.value)date.value=salesTodayIso();
+  if(month&&!month.value)month.value=salesMonthIso();
+  bindSalesFormEvents();
+  updateSaleCommissionPreview();
+  renderVendorSalesList();
+}
+function bindSalesFormEvents(){
+  var ids=['sale-value','sale-commission-pct','sale-discount','sale-discount-value','sale-filter-month','sale-filter-date'];
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el||el.dataset.bound)return;
+    el.dataset.bound='1';
+    el.addEventListener('input',function(){
+      if(id==='sale-value'||id==='sale-commission-pct')updateSaleCommissionPreview();
+      if(id==='sale-filter-month'||id==='sale-filter-date')renderVendorSalesList();
+    });
+    el.addEventListener('change',function(){
+      if(id==='sale-value'||id==='sale-commission-pct')updateSaleCommissionPreview();
+      if(id==='sale-filter-month'||id==='sale-filter-date')renderVendorSalesList();
+    });
+  });
+  var proof=document.getElementById('sale-proof');
+  if(proof&&!proof.dataset.bound){
+    proof.dataset.bound='1';
+    proof.addEventListener('change',function(){
+      var f=this.files&&this.files[0];
+      document.getElementById('sale-proof-status').textContent=f?('Selecionado: '+f.name):'PDF ou imagem, se houver.';
+    });
+  }
+  var list=document.getElementById('sales-list');
+  if(list&&!list.dataset.bound){
+    list.dataset.bound='1';
+    list.addEventListener('click',function(e){
+      var btn=e.target.closest('[data-sales-action]');
+      if(!btn)return;
+      var id=btn.dataset.id;
+      if(btn.dataset.salesAction==='edit')editVendorSale(id);
+      if(btn.dataset.salesAction==='delete')deleteVendorSale(id);
+      if(btn.dataset.salesAction==='proof')openSaleProof(id);
+    });
+  }
+}
+function saveVendorSale(){
+  if(!curVendor)return;
+  var date=(document.getElementById('sale-date').value||salesTodayIso());
+  var product=document.getElementById('sale-product').value.trim();
+  var type=document.getElementById('sale-type').value;
+  var value=parseFloat(document.getElementById('sale-value').value)||0;
+  var pct=parseFloat(document.getElementById('sale-commission-pct').value)||0;
+  if(!product){alert('Informe o produto vendido.');return;}
+  if(value<=0){alert('Informe o valor da venda.');return;}
+  var id=document.getElementById('sale-id').value;
+  var list=getVendorSales(curVendor.id);
+  var existing=id?list.find(function(s){return s.id===id;}):null;
+  var file=document.getElementById('sale-proof').files[0];
+  if(file&&file.size>3*1024*1024){alert('Comprovante muito grande. Use arquivo de ate 3 MB.');return;}
+  function finish(proof){
+    var sale={
+      id:id||('sale_'+Date.now()+'_'+Math.random().toString(16).slice(2)),
+      date:date,
+      product:product,
+      type:type,
+      value:value,
+      discount:document.getElementById('sale-discount').value,
+      discountValue:parseFloat(document.getElementById('sale-discount-value').value)||0,
+      commissionPct:pct,
+      commissionValue:value*pct/100,
+      buyerName:document.getElementById('sale-buyer-name').value.trim(),
+      buyerPhone:document.getElementById('sale-buyer-phone').value.trim(),
+      buyerEmail:document.getElementById('sale-buyer-email').value.trim(),
+      proof:proof,
+      createdAt:existing&&existing.createdAt?existing.createdAt:new Date().toISOString(),
+      updatedAt:new Date().toISOString()
+    };
+    if(existing){
+      var idx=list.findIndex(function(s){return s.id===sale.id;});
+      list[idx]=sale;
+    }else{
+      list.push(sale);
+    }
+    saveSales();
+    clearSaleForm();
+    renderVendorSalesList();
+    buildDateBtns(curVendor);
+    var toast=document.getElementById('saved-toast');
+    if(toast){toast.textContent='Venda salva com sucesso!';toast.style.opacity='1';setTimeout(function(){toast.style.opacity='0';toast.textContent='✅ Salvo com sucesso!';},2400);}
+  }
+  if(file){
+    var reader=new FileReader();
+    reader.onload=function(ev){finish({name:file.name,type:file.type,data:ev.target.result});};
+    reader.readAsDataURL(file);
+  }else{
+    finish(existing?existing.proof:null);
+  }
+}
+function clearSaleForm(){
+  ['sale-id','sale-product','sale-value','sale-discount-value','sale-commission-pct','sale-buyer-name','sale-buyer-phone','sale-buyer-email'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.value='';
+  });
+  var date=document.getElementById('sale-date');if(date)date.value=salesTodayIso();
+  var type=document.getElementById('sale-type');if(type)type.value='ingresso';
+  var disc=document.getElementById('sale-discount');if(disc)disc.value='nao';
+  var proof=document.getElementById('sale-proof');if(proof)proof.value='';
+  var status=document.getElementById('sale-proof-status');if(status)status.textContent='PDF ou imagem, se houver.';
+  updateSaleCommissionPreview();
+}
+function clearSalesFilters(){
+  var m=document.getElementById('sale-filter-month');if(m)m.value='';
+  var d=document.getElementById('sale-filter-date');if(d)d.value='';
+  renderVendorSalesList();
+}
+function editVendorSale(id){
+  if(!curVendor)return;
+  var s=getVendorSales(curVendor.id).find(function(x){return x.id===id;});
+  if(!s)return;
+  document.getElementById('sale-id').value=s.id;
+  document.getElementById('sale-date').value=s.date||salesTodayIso();
+  document.getElementById('sale-product').value=s.product||'';
+  document.getElementById('sale-type').value=s.type||'ingresso';
+  document.getElementById('sale-value').value=s.value||'';
+  document.getElementById('sale-discount').value=s.discount||'nao';
+  document.getElementById('sale-discount-value').value=s.discountValue||'';
+  document.getElementById('sale-commission-pct').value=s.commissionPct||'';
+  document.getElementById('sale-buyer-name').value=s.buyerName||'';
+  document.getElementById('sale-buyer-phone').value=s.buyerPhone||'';
+  document.getElementById('sale-buyer-email').value=s.buyerEmail||'';
+  var proof=document.getElementById('sale-proof');if(proof)proof.value='';
+  document.getElementById('sale-proof-status').textContent=s.proof?('Comprovante salvo: '+s.proof.name):'PDF ou imagem, se houver.';
+  updateSaleCommissionPreview();
+  document.getElementById('vt-sales').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function deleteVendorSale(id){
+  if(!curVendor)return;
+  if(!confirm('Excluir esta venda?'))return;
+  SALES[curVendor.id]=getVendorSales(curVendor.id).filter(function(s){return s.id!==id;});
+  saveSales();
+  renderVendorSalesList();
+  buildDateBtns(curVendor);
+}
+function openSaleProof(id){
+  if(!curVendor)return;
+  var s=getVendorSales(curVendor.id).find(function(x){return x.id===id;});
+  if(!s||!s.proof){alert('Esta venda nao possui comprovante anexado.');return;}
+  var w=window.open('','_blank');
+  if(!w){alert('Permita pop-ups para abrir o comprovante.');return;}
+  var isPdf=(s.proof.type||'').indexOf('pdf')>-1;
+  w.document.write('<title>'+salesEsc(s.proof.name)+'</title><body style="margin:0;background:#0b1220;color:white;font-family:Arial,sans-serif">'+(isPdf?'<iframe src="'+s.proof.data+'" style="border:0;width:100%;height:100vh"></iframe>':'<img src="'+s.proof.data+'" style="display:block;max-width:100%;height:auto;margin:0 auto">')+'</body>');
+  w.document.close();
+}
+function renderVendorSalesList(){
+  if(!curVendor)return;
+  var listEl=document.getElementById('sales-list');
+  if(!listEl)return;
+  var rows=filteredVendorSales(curVendor.id);
+  var total=rows.reduce(function(t,s){return t+(Number(s.value)||0);},0);
+  var commissions=rows.reduce(function(t,s){return t+(Number(s.commissionValue)||0);},0);
+  var discounts=rows.reduce(function(t,s){return t+(Number(s.discountValue)||0);},0);
+  var ingressos=rows.filter(function(s){return s.type==='ingresso';}).length;
+  var mentorias=rows.filter(function(s){return s.type==='mentoria';}).length;
+  var summary=document.getElementById('sales-summary');
+  if(summary){
+    summary.innerHTML='<div class="sales-kpi"><div class="sales-kpi-v">'+rows.length+'</div><div class="sales-kpi-l">Vendas</div></div>'
+      +'<div class="sales-kpi"><div class="sales-kpi-v">'+salesMoney(total)+'</div><div class="sales-kpi-l">Faturamento</div></div>'
+      +'<div class="sales-kpi"><div class="sales-kpi-v">'+salesMoney(commissions)+'</div><div class="sales-kpi-l">A receber</div></div>'
+      +'<div class="sales-kpi"><div class="sales-kpi-v">'+ingressos+' / '+mentorias+'</div><div class="sales-kpi-l">Ingressos / mentorias</div></div>';
+  }
+  var sub=document.getElementById('sales-list-sub');
+  if(sub){
+    var f=currentSalesFilters();
+    sub.textContent=f.date?('Data: '+salesFmtDate(f.date)):f.month?('Mes: '+f.month.split('-').reverse().join('/')):'Todas as vendas salvas';
+  }
+  if(!rows.length){
+    listEl.innerHTML='<div class="sales-empty">Nenhuma venda encontrada para o filtro selecionado.</div>';
+    return;
+  }
+  var html='<div class="sales-table-wrap"><table class="sales-table"><thead><tr>'
+    +'<th>Data</th><th>Produto</th><th>Tipo</th><th>Valor</th><th>Desconto</th><th>%</th><th>A receber</th><th>Comprador</th><th>Contato</th><th>Comprovante</th><th>Ações</th>'
+    +'</tr></thead><tbody>';
+  rows.forEach(function(s){
+    html+='<tr>'
+      +'<td>'+salesFmtDate(s.date)+'</td>'
+      +'<td><b style="color:var(--white)">'+salesEsc(s.product)+'</b></td>'
+      +'<td><span class="sale-type-pill '+(s.type==='mentoria'?'mentoria':'')+'">'+(s.type==='mentoria'?'Mentoria':'Ingresso')+'</span></td>'
+      +'<td style="color:var(--green);font-weight:900">'+salesMoney(s.value)+'</td>'
+      +'<td>'+(s.discount==='sim'?'Sim · '+salesMoney(s.discountValue):'Não')+'</td>'
+      +'<td>'+((Number(s.commissionPct)||0).toLocaleString('pt-BR'))+'%</td>'
+      +'<td style="color:var(--green);font-weight:900">'+salesMoney(s.commissionValue)+'</td>'
+      +'<td>'+salesEsc(s.buyerName||'-')+'</td>'
+      +'<td>'+salesEsc([s.buyerPhone,s.buyerEmail].filter(Boolean).join(' · ')||'-')+'</td>'
+      +'<td>'+(s.proof?'<button class="sales-mini" data-sales-action="proof" data-id="'+s.id+'">Abrir</button>':'-')+'</td>'
+      +'<td><div class="sales-mini-actions"><button class="sales-mini" data-sales-action="edit" data-id="'+s.id+'">Editar</button><button class="sales-mini" data-sales-action="delete" data-id="'+s.id+'">Excluir</button></div></td>'
+      +'</tr>';
+  });
+  html+='</tbody></table></div>';
+  listEl.innerHTML=html;
+}
+
 function buildSources(v,evt,day){
   var g=document.getElementById('v-src-'+evt);
+  if(!g)return;
   g.innerHTML='';
-  SOURCES.forEach(function(s){
+  sourcesForEvent(evt).forEach(function(s){
     var val=gV(v.id,evt,day,s.key);
     var hist=[],total=0;
     for(var d=0;d<N;d++){var v2=gV(v.id,evt,d,s.key);if(v2>0){hist.push({d:d,date:fmtD(DATES[d]),val:v2});total+=v2;}}
@@ -2701,9 +3434,9 @@ async function aiCallOpenAI(key,model,messages,options){
 // ─── CONTEXT BUILDERS ───
 function aiSystemPromptBase(){
   return 'Você é o assistente de vendas do Grupo GH, especializado em vendas de eventos médicos no Brasil. ' +
-         'Eventos atuais: Med Master Plan (MMP, junho/2026, Alphaville-SP) e Monster Day. ' +
-         'Time de vendas: Igor, Jack, José, Bruno e Esteves (diretor de vendas). ' +
-         'Produtos: Ingressos e Mentorias. ' +
+         'Eventos/produtos atuais: Med Master Plan, Monster Day e Produto Especial. ' +
+         'Time de vendas: Igor, Jack, José e Esteves (diretor de vendas). ' +
+         'Produtos: Ingressos, Mentorias e Produto Especial configuravel. ' +
          'Canais de aquisição: Tráfego pago/Clint, Instagram (Holzer e Guto), Indicações. ' +
          'Etapas do funil: Abordados → Negociação → Confirmados; também há Follow-up. ' +
          'Responda em português brasileiro, tom profissional mas direto. Seja prático, acionável e específico. ' +
@@ -2735,7 +3468,7 @@ function aiVendorContext(){
   };
   return '\n\nCONTEXTO DO VENDEDOR:\n' +
          'Nome: '+curVendor.id+'\n' +
-         'Evento ativo: '+(evt==='md'?'Monster Day':'Med Master Plan')+'\n' +
+         'Evento ativo: '+eventDisplayName(evt)+'\n' +
          'Dia em análise: '+today+'\n' +
          'Métricas do dia: '+todayData.abordados+' abordados, '+todayData.confirmados+' confirmados, '+todayData.followup+' em follow-up\n' +
          'Acumulado no evento: '+t.abordados+' abordados, '+t.confirmados+' confirmados ('+t.ingressos+' ingressos + '+t.mentorias+' mentorias), '+t.followup+' em follow-up\n' +
@@ -3166,7 +3899,7 @@ async function aiGenerateFollowup(){
       valor:'tom educativo, focando no valor e benefício para o médico'
     }[tone];
     var sys=aiSystemPromptBase()+'\n\nGere mensagem CURTA de WhatsApp (máx 5 linhas) para o vendedor enviar ao lead. '+toneDesc+'. Não use saudação genérica tipo "tudo bem?". Vá direto, com o nome do lead. Personalize considerando canal e status. Termine com convite à ação concreta (link, ligar, marcar horário). Máximo 2 emojis. NÃO inclua placeholders [colchetes] nem (parênteses sugestivos) — escreva o texto pronto pra enviar.';
-    var evtLabel=event==='md'?'Monster Day':'Med Master Plan';
+    var evtLabel=eventDisplayName(event);
     var leadDesc='Nome: '+name+'\nCanal: '+source+'\nStatus: '+status+'\nEvento: '+evtLabel;
     if(obs)leadDesc+='\nContexto extra: '+obs;
     var reply=await aiCall([
@@ -3594,7 +4327,7 @@ function monstroSystemPrompt(){
     'Abordado → Negociação → Confirmado (Ingresso ou Mentoria). Quem não responde → Follow-up.',
     '',
     '═══ TIME DE VENDAS ═══',
-    'Igor, Jack, José, Bruno e Esteves (diretor de vendas).',
+    'Igor, Jack, José e Esteves (diretor de vendas).',
     '',
     '═══ REGRAS IMPORTANTES ═══',
     '• Responda SEMPRE em português brasileiro.',
@@ -3619,7 +4352,7 @@ function monstroVendorContext(){
   var conv=t.abordados>0?Math.round(t.confirmados/t.abordados*100):0;
   return '\n\n═══ CONTEXTO DESTE VENDEDOR ═══\n' +
          'Nome: '+curVendor.id+'\n' +
-         'Evento ativo agora: '+(evt==='md'?'Monster Day':'Med Master Plan')+'\n' +
+         'Evento ativo agora: '+eventDisplayName(evt)+'\n' +
          'Métricas acumuladas no evento: '+t.abordados+' abordados, '+t.confirmados+' confirmados ('+t.ingressos+' ingressos + '+t.mentorias+' mentorias), '+t.followup+' em follow-up. Conversão: '+conv+'%.';
 }
 
@@ -3871,7 +4604,6 @@ window.addEventListener('DOMContentLoaded',function(){
             <option value="Igor">Igor</option>
             <option value="Jack">Jack</option>
             <option value="Jose">José</option>
-            <option value="Bruno">Bruno</option>
             <option value="Esteves">Esteves</option>
           </select>
           <select id="ai-attr-event">
